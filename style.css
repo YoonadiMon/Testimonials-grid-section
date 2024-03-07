@@ -8,7 +8,10 @@
 }
 html {
     box-sizing: border-box;
+    font-size: 13px;
+    font-family: "Barlow Semi Condensed", sans-serif;
 }
+
 /* borders */
 /* #container {
     border: 5px solid black;    
@@ -25,12 +28,12 @@ html {
 #row1 #daniel, #row2 #patrick {
     border: 1px solid magenta; 
 }
-#row1 #jonathan, #row2 #jenette {
+#row1 #jonathan, #row2 #jeanette {
     border: 1px solid cyan; 
 } */
 
 /* flex */
-body, #container, #cards, #row1, #row2 {
+body, #container, #cards, #row1, #row2, .graduates {
     display: flex; 
 }
 
@@ -42,6 +45,48 @@ body {
     flex-direction: column;
     background: #edf2f8;
 }
+
+/* fonts, house style */
+.name, h1 {
+    color: white;
+}
+h1 { 
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+p, .status {
+    color: white;
+    opacity: 0.7;
+}
+p {
+    font-size: 1rem;
+}
+#kira h1, #jeanette h1, #kira .name, #jeanette .name {
+    color: hsl(217, 19%, 35%);
+}
+#kira p, #jeanette p, #kira .status, #jeanette .status {
+    color:#8a8e91;
+    opacity: 1;
+}
+#kira p {
+    font-size: 0.9rem;
+}
+
+
+
+.graduates, h1 {
+    padding-bottom: 20px;
+}
+
+.graduates {
+    align-items: center;
+}
+.graduates img {
+    border-radius: 50%;
+    width: 25px;
+    margin-right: 15px;
+}
+
 
 /* container */
 #container {
@@ -58,39 +103,73 @@ body {
 
 /* col 1 */
 #col1 {
-    width: 75%;
+    width: 80%;
     margin-right: 20px;
 }
-#row1, #row2 {
+/* #row1, #row2 {
     height: 48%;
+} */
+
+/* all */
+#row1 #daniel, #row2 #patrick, #row1 #jonathan, #row2 #jeanette, #col2 {
+    border-radius: 10px;
+    overflow: hidden;
+}
+#daniel #text, #jeanette, #jonathan, #kira, #patrick {
+    padding: 20px;
 }
 
 /* row 1, row 2 */
 #row1 #daniel, #row2 #patrick {
-    width: 60%;
+    width: 70%;
     height: 100%;
 }
-#row1 #jonathan, #row2 #jenette {
-    width: 40%;
+#row1 #jonathan, #row2 #jeanette {
+    width: 30%;
     height: 100%;
 }
-#row1 #daniel, #row2 #jenette {
+#row1 #daniel, #row2 #jeanette {
     margin-right: 20px; 
 }
 
 /* row 1 */
 #row1 {
     margin-bottom: 20px;
+    height: 51%;
 }
 #row1 #daniel {
-    background: #733fc8;
+    position: relative;
+}
+#row1 #daniel #bgColor {
+    width: 100%;
+    height: 100%;
+    background-color: #733fc8;
+    position: absolute;
+    z-index: 1;
+}
+#row1 #daniel #bgImg {
+    width: 100%;
+    height: 100%;
+    background: url(/images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-size: 20%;
+    position: absolute;
+    left: 65%;
+    z-index: 2;
+}
+#row1 #daniel #text {
+    position: absolute;
+    z-index: 3;
 }
 #row1 #jonathan {
     background: #49556b;
 }
 
 /* row 2 */
-#row2 #jenette {
+#row2 {
+    height: 45%;
+}
+#row2 #jeanette {
     background: #fff;
 }
 #row2 #patrick {
@@ -99,7 +178,7 @@ body {
 
 /* col 2 */
 #col2 {
-    width: 25%;
+    width: 20%;
     height: 100%;
     background: #fff;
 }
