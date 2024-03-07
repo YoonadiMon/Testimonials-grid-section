@@ -52,26 +52,40 @@ body {
 }
 h1 { 
     font-size: 1.4rem;
+    font-weight: 700;
+}
+.name {
     font-weight: 500;
 }
 p, .status {
-    color: white;
-    opacity: 0.7;
+    color: white;  
+}
+.status {
+    opacity: 0.5;
 }
 p {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    opacity: 0.7;
 }
-#kira h1, #jeanette h1, #kira .name, #jeanette .name {
+#kira h1, #kira p, #jeanette h1, #jeanette p, #kira .name, #jeanette .name, #kira .status, #jeanette .status {
     color: hsl(217, 19%, 35%);
 }
-#kira p, #jeanette p, #kira .status, #jeanette .status {
-    color:#8a8e91;
-    opacity: 1;
+#kira p, #jeanette p  {
+    opacity: 0.7;
 }
-#kira p {
-    font-size: 0.9rem;
+#kira .status, #jeanette .status {
+    opacity: 0.5;
+}
+#kira p, #patrick p {
+    font-size: 0.95rem;
+}
+#jeanette p {
+    font-size: 1.15rem;
 }
 
+#patrick h1, #patrick .graduates {
+    padding-bottom: 15px;
+}
 
 
 .graduates, h1 {
@@ -104,7 +118,7 @@ p {
 /* col 1 */
 #col1 {
     width: 80%;
-    margin-right: 20px;
+    margin-right: 30px;
 }
 /* #row1, #row2 {
     height: 48%;
@@ -129,12 +143,12 @@ p {
     height: 100%;
 }
 #row1 #daniel, #row2 #jeanette {
-    margin-right: 20px; 
+    margin-right: 30px; 
 }
 
 /* row 1 */
 #row1 {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     height: 51%;
 }
 #row1 #daniel {
