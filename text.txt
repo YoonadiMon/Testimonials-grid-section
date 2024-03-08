@@ -50,3 +50,23 @@ Daniel Clifford
   could ever have. In fact, I’ve often referred to it during interviews as an example of my developent 
   experience. It certainly helped me land a job as a full-stack developer after receiving multiple offers. 
   100% recommend! ”
+
+  /* borders */
+#container {
+    border: 5px solid black;
+}
+#cards {
+    border: 4px solid red;
+}
+#col1, #col2 {
+    border: 3px solid green;
+}
+#row1, #row2 {
+    border: 2px solid blue;
+}
+#row1 #daniel, #row2 #patrick {
+    border: 1px solid magenta;
+}
+#row1 #jonathan, #row2 #jeanette {
+    border: 1px solid cyan;
+}
