@@ -16,4 +16,4 @@
 
 .prettierignore
 
-text.txt
+*.txt
