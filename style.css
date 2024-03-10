@@ -15,9 +15,8 @@ html {
 /* grid */
 #cards {
     width: 100%;
-    height: 60%;
     display: grid;
-    gap: 3rem; 
+    gap: 2rem; 
     grid-template-columns: repeat(4, 1fr);
     /* grid-template-areas:
         "daniel jonathan kira"
@@ -25,7 +24,7 @@ html {
 
 }
 
-body {
+body, html {
     width: 100vw;
     height: 100vh;
     background: #edf2f8;
@@ -37,7 +36,6 @@ body {
 
 #container {
     width: 80%;
-    margin-bottom: 40px;
 } 
 
 /* fonts, house style */
@@ -45,7 +43,7 @@ body {
     color: white;
 }
 h1 {
-    font-size: 2.4rem;
+    font-size: 1.1rem;
     font-weight: 700;
 }
 .name {
@@ -58,7 +56,7 @@ p, .status {
     opacity: 0.5;
 }
 p {
-    font-size: 2.1rem;
+    font-size: 1rem;
     opacity: 0.7;
 }
 #kira h1, #kira p, #jeanette h1, #jeanette p, #kira .name, #jeanette .name, #kira .status, #jeanette .status {
@@ -69,15 +67,6 @@ p {
 }
 #kira .status, #jeanette .status {
     opacity: 0.5;
-}
-#patrick p {
-    font-size: 1.95rem;
-}
-#kira p {
-    font-size: 2rem;
-}
-#jeanette p {
-    font-size: 2.15rem;
 }
 #patrick h1, #patrick .graduates {
     padding-bottom: 15px;
@@ -95,14 +84,14 @@ p {
 }
 .graduates img {
     border-radius: 50%;
-    width: 4rem;
+    width: 3rem;
     margin-right: 15px;
 }
 .name {
-    font-size: 1.6rem;
+    font-size: 1rem;
 }
 .status {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
 }
 
 .grid-col-span-2 {
@@ -111,7 +100,7 @@ p {
 
 /* all */
 #daniel #text, #daniel #bgColor, #jonathan, #kira, #jeanette, #patrick {
-    padding: 40px;
+    padding: 20px;
     border-radius: 8px;
     
 }
@@ -172,7 +161,7 @@ p {
 }
 
 
-.attribution { font-size: 1.5rem; text-align: center; margin-bottom: 20px; }
+.attribution { font-size: 1rem; text-align: center; margin-bottom: 20px; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
 /* @media(max-width: 500px) {
