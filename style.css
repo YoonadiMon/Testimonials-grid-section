@@ -12,26 +12,40 @@ html {
     font-family: "Barlow Semi Condensed", sans-serif;
 }
 
-/* flex */
-body, #container, #cards, #row1, #row2, .graduates {
-    display: flex;
+/* grid */
+#cards {
+    width: 100%;
+    height: 60%;
+    display: grid;
+    gap: 3rem; 
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-areas:
+        "daniel jonathan kira"
+        "jeanette patrick kira"; */
+
 }
 
 body {
     width: 100vw;
     height: 100vh;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
     background: #edf2f8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+#container {
+    width: 80%;
+    margin-bottom: 40px;
+} 
 
 /* fonts, house style */
 .name, h1 {
     color: white;
 }
 h1 {
-    font-size: 1.4rem;
+    font-size: 2.4rem;
     font-weight: 700;
 }
 .name {
@@ -44,7 +58,7 @@ p, .status {
     opacity: 0.5;
 }
 p {
-    font-size: 1.1rem;
+    font-size: 2.1rem;
     opacity: 0.7;
 }
 #kira h1, #kira p, #jeanette h1, #jeanette p, #kira .name, #jeanette .name, #kira .status, #jeanette .status {
@@ -57,20 +71,21 @@ p {
     opacity: 0.5;
 }
 #patrick p {
-    font-size: 0.95rem;
+    font-size: 1.95rem;
 }
 #kira p {
-    font-size: 1rem;
+    font-size: 2rem;
 }
 #jeanette p {
-    font-size: 1.15rem;
+    font-size: 2.15rem;
 }
-
 #patrick h1, #patrick .graduates {
     padding-bottom: 15px;
 }
 
-
+.graduates {
+    display: flex;
+}
 .graduates, h1 {
     padding-bottom: 20px;
 }
@@ -80,103 +95,87 @@ p {
 }
 .graduates img {
     border-radius: 50%;
-    width: 25px;
+    width: 4rem;
     margin-right: 15px;
 }
-
-
-/* container */
-#container {
-    width: 85%;
-    height: 85%;
-    margin: 50px;
+.name {
+    font-size: 1.6rem;
+}
+.status {
+    font-size: 1.2rem;
 }
 
-
-
-/* col 1 */
-#col1 {
-    width: 78%;
-    margin-right: 30px;
+.grid-col-span-2 {
+    grid-column: span 2;
 }
 
 /* all */
-#row1 #daniel, #row2 #patrick, #row1 #jonathan, #row2 #jeanette, #col2 {
-    border-radius: 10px;
-    overflow: hidden;
-}
-#daniel #text, #jeanette, #jonathan, #kira, #patrick {
-    padding: 20px;
+#daniel #text, #daniel #bgColor, #jonathan, #kira, #jeanette, #patrick {
+    padding: 40px;
+    border-radius: 8px;
+    
 }
 
-/* row 1, row 2 */
-#row1 #daniel, #row2 #patrick {
-    width: 70%;
-    height: 100%;
-}
-#row1 #jonathan, #row2 #jeanette {
-    width: 30%;
-    height: 100%;
-}
-#row1 #daniel, #row2 #jeanette {
-    margin-right: 30px;
-}
 
-/* row 1 */
-#row1 {
-    margin-bottom: 30px;
-    height: 51%;
-}
-#row1 #daniel {
+/* daniel */
+#daniel {
     position: relative;
 }
-#row1 #daniel #bgColor {
+#daniel #bgColor {
     width: 100%;
     height: 100%;
     background-color: #733fc8;
     position: absolute;
     z-index: 1;
+    
 }
-#row1 #daniel #bgImg {
-    width: 100%;
-    height: 100%;
+#daniel #bgImg {
+    width: 50%;
+    height: 50%;
     background: url(images/bg-pattern-quotation.svg);
     background-repeat: no-repeat;
-    background-size: 20%;
+    background-size: 30%;
     position: absolute;
-    left: 65%;
+    left: 75%;
     z-index: 2;
 }
-#row1 #daniel #text {
+#daniel #text {
+    width: 100%;
+    height: 100%;
     position: absolute;
     z-index: 3;
+    
 }
-#row1 #jonathan {
+
+/* jonathan */
+#jonathan {
     background: #49556b;
 }
 
-/* row 2 */
-#row2 {
-    height: 45%;
-}
-#row2 #jeanette {
-    background: #fff;
-}
-#row2 #patrick {
+/* patrick */
+#patrick {
     background: #18202d;
 }
 
-/* col 2 */
-#col2 {
-    width: 22%;
-    height: 100%;
-    background: #fff;
+#kira {
+    /* grid-area: kira; */
+    grid-row: span 2;
+    background: white;
+    grid-column-start: 4;
+    grid-row: 1 / 3;
+
 }
 
-.attribution { font-size: 11px; text-align: center; margin-bottom: 20px; }
+#jeanette {
+    /* grid-area: jeanette; */
+    background: white;
+}
+
+
+.attribution { font-size: 1.5rem; text-align: center; margin-bottom: 20px; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
-@media(max-width: 500px) {
+/* @media(max-width: 500px) {
     body {
         height: auto;
     }
@@ -239,4 +238,4 @@ p {
     #jeanette p {
         font-size: 1rem;
     }
-}
+} */
